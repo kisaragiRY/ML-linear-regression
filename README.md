@@ -1,27 +1,23 @@
 # Machine Learning From Scratch: Linear Regression
 This repo is for implementing **linear regression** on the famous Red Wine Quality dataset.
 
-## Author
-Kisaragi.Z
-
-*An enthusiast for sharing knowledge.*
+Author: Kisaragi.Z (*An enthusiast for sharing knowledge.*
 
 ## Download Data
 download this data and put it under `data/`
 -  https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009?resource=download
 
-## Prerequisite
-1. poetry 
-    - https://python-poetry.org/docs/#installing-with-the-official-installer
-    - simple instruction on Mac OS
-        ```bash 
-        # download poetry
-        curl -sSL https://install.python-poetry.org | python3 -
-        # add poetry to path
-        export PATH="/Users/[user-name]/.local/bin:$PATH
-        ```
-2. pyenv
-    - https://github.com/pyenv/pyenv
+## Environment Preparation
+### poetry 
+- https://python-poetry.org/docs/#installing-with-the-official-installer
+- simple downloading instruction on Mac OS
+    ```bash 
+    # download poetry
+    curl -sSL https://install.python-poetry.org | python3 -
+
+    # add poetry path to ~/.zshrc 
+    export PATH="$HOME/.local/bin:$PATH >> ~/.zshrc
+    ```
 
 ## Project Structure
 - data
