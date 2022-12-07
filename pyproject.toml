@@ -8,6 +8,12 @@ packages = [{include = "ml_linear_regression"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+pandas = "^1.5.2"
+matplotlib = "^3.6.2"
+numpy = "^1.23.5"
+ipykernel = "^6.17.1"
+pathlib = "^1.0.1"
+seaborn = "^0.12.1"
 
 
 [build-system]
