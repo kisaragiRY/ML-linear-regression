@@ -31,4 +31,4 @@ class WineDataset:
 
         y_train = self.data["quality"].loc[X_train.index]
         y_test = self.data["quality"].loc[X_test.index]
-        return X_train, X_test, y_train, y_test 
+        return X_train.values, X_test.values, y_train.values, y_test.values
