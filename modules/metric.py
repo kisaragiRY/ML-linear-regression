@@ -33,28 +33,29 @@ def r2_score(y_true: NDArray, y_pred: NDArray) -> float:
 def condition_number(X: NDArray) -> float:
     """Calculate the condition number of matrix X.
 
-    Its definition is the largest eigenvalue divided by the smallest of matrix X.
+    It's matrix X's largest eigenvalue divided by the smallest.
     """
     eigenv = np.linalg.eigvals(X)
     return max(eigenv) / min(eigenv)
 
 
-def vif(X: NDArray) -> NDArray:
+def vif(X: NDArray) -> list:
     """Calculate the VIF(variance inflation factor) for the design matrix X.
 
     Return an array of VIF corresponds to each featurn in the design matrix.
 
     Parameter
-    ----------
+    ----------`
     X: NDArray 
         Design matrix.
     """
-    lr = LinearRegression()
+    
     n_coeff = X.shape[1]
     out = []
     for i in range(n_coeff):
         X_train = X[: , np.arange(n_coeff) != i]
         y_true = X[:, i]
+        lr = LinearRegression()
         lr.fit(X_train , y_true)
         y_pred = lr.predict(X_train)
         out.append(1 / (1 - r2_score(y_true, y_pred)))
